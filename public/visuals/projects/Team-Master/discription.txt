@@ -1,0 +1,3 @@
+* Developed an advanced AI-driven meeting platform that brings together computer vision, speech processing, and LLM in a single system. 
+* Integrated hybrid Urdu-English transcription and diarization, enabling multi-speaker tracking, language detection, and meeting’s MoM generation through LLM. 
+* Used CV techniques to capture the attendance of the participants automatically through facial recognition.
