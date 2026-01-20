@@ -10,7 +10,7 @@ const Footer = () => {
                         <a href="#hero" className="flex items-center gap-3 mb-4 group">
                             <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300">
                                 <img 
-                                    src="visuals/Logo/AI_Agentica.png" 
+                                    src="/visuals/Logo/AI_Agentica.png" 
                                     alt="Agentica Logo" 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />

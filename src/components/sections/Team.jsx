@@ -7,7 +7,7 @@ const Team = () => {
         {
             name: "Shahzaib Ali",
             role: "AI Engineer",
-            image: "visuals/team/Shahzaib_Ali.jpg",
+            image: "/visuals/team/Shahzaib_Ali.jpg",
             social: {
                 twitter: "#",
                 instagram: "#",
@@ -17,7 +17,7 @@ const Team = () => {
         {
             name: "Shaiman Qadir",
             role: "Computer Vision Specialist",
-            image: "visuals/team/Shaiman.jpeg",
+            image: "/visuals/team/Shaiman.jpeg",
             social: {
                 twitter: "#",
                 instagram: "#",
@@ -27,7 +27,7 @@ const Team = () => {
         {
             name: "Amr Rameez",
             role: "MLOps Engineer",
-            image: "visuals/team/Amar.jpeg",
+            image: "/visuals/team/Amar.jpeg",
             social: {
                 twitter: "#",
                 instagram: "#",
@@ -37,7 +37,7 @@ const Team = () => {
         {
             name: "Abdul Moiz Rana",
             role: "Full-Stack Developer",
-            image: "visuals/team/Rana.jpeg",
+            image: "/visuals/team/Rana.jpeg",
             social: {
                 twitter: "#",
                 instagram: "#",
@@ -47,7 +47,7 @@ const Team = () => {
         {
             name: "Abdulahad Iltaf",
             role: "Automation Engineer",
-            image: "visuals/team/Ahad.jpg",
+            image: "/visuals/team/Ahad.jpg",
             social: {
                 twitter: "#",
                 instagram: "#",
@@ -57,7 +57,7 @@ const Team = () => {
         {
             name: "Haji Dilbar",
             role: "Web Developer",
-            image: "visuals/team/Haji_Dilbar.jpg",
+            image: "/visuals/team/Haji_Dilbar.jpg",
             social: {
                 twitter: "#",
                 instagram: "#",

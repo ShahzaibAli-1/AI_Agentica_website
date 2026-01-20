@@ -10,25 +10,25 @@ const Portfolio = () => {
             title: "Davinchi",
             desc: "Advanced AI art generation platform creating stunning visuals from text prompts.",
             tags: ["AI Art", "Generation", "Design"],
-            image: "visuals/projects/davinci.png",
+            image: "/visuals/projects/davinci.png",
         },
         {
             title: "Crop Classification",
             desc: "Agricultural AI system using computer vision to identify crop health and diseases.",
             tags: ["Computer Vision", "Agriculture", "ML"],
-            image: "visuals/projects/Crop_Image.jpeg",
+            image: "/visuals/projects/Crop_Image.jpeg",
         },
         {
             title: "AI Meet",
             desc: "Intelligent meeting assistant that records, transcribes, and summarizes calls in real-time.",
             tags: ["AI Assistant", "Transcription", "NLP"],
-            image: "visuals/projects/AI_Meeting.webp",
+            image: "/visuals/projects/AI_Meeting.webp",
         },
         {
             title: "Doc Extractor",
             desc: "Automated document processing engine extracting structured data from unstructured PDFs.",
             tags: ["OCR", "Document AI", "Automation"],
-            image: "visuals/projects/Document_extractor.png",
+            image: "/visuals/projects/Document_extractor.png",
         }
     ];
 
