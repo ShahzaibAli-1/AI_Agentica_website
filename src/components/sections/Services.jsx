@@ -7,28 +7,28 @@ const Services = () => {
 
     const services = [
         {
-            title: "Computer Vision",
-            description: "Advanced image and video analysis solutions for object detection, facial recognition, and real-time visual intelligence.",
+            title: "Intelligent AI Agent Development",
+            description: "Build autonomous AI agents that reason, plan, and execute complex business tasks with enterprise-grade reliability and scalability.",
         },
         {
-            title: "Website & Mobile App Development",
-            description: "Full-stack web and mobile development integrated with cutting-edge AI capabilities.",
+            title: "Enterprise AI Automation",
+            description: "Deploy intelligent automation solutions that transform workflows, reduce operational costs, and boost productivity across your organization.",
         },
         {
-            title: "AI Automation",
-            description: "Streamline your business processes with intelligent automation that reduces manual work and increases efficiency.",
+            title: "Custom AI Solutions",
+            description: "Tailored artificial intelligence and machine learning solutions designed for your unique business challenges and growth objectives.",
         },
         {
-            title: "Agentic AI Related Projects",
-            description: "Develop autonomous AI agents that can reason, plan, and execute complex tasks independently for your business.",
+            title: "AI-Powered CRM Integration",
+            description: "Seamlessly integrate intelligent CRM systems with AI automation to enhance customer engagement and optimize sales performance.",
         },
         {
-            title: "CRM Integration",
-            description: "Seamlessly integrate AI-powered CRM solutions to enhance customer relationships and optimize sales workflows.",
+            title: "Computer Vision & AI Analytics",
+            description: "Advanced image recognition, video analysis, and real-time visual intelligence powered by cutting-edge AI technology.",
         },
         {
-            title: "AI Solutions",
-            description: "Cutting-edge AI and machine learning solutions for automation and intelligent decision-making.",
+            title: "AI-Enhanced Web & Mobile Development",
+            description: "Full-stack application development with integrated AI capabilities for smarter, more responsive digital experiences.",
         }
     ];
 

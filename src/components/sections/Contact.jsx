@@ -14,7 +14,7 @@ Email: ${formData.get('email')}
 Message:
 ${formData.get('message')}`;
 
-        window.location.href = `mailto:ai.agentica@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = `mailto:contact@agentroller.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     };
 
     return (
@@ -33,11 +33,11 @@ ${formData.get('message')}`;
                     <div className="text-center mb-16">
                         <span className="inline-block text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Get In Touch</span>
                         <h2 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-                            Let's Build Something
-                            <span className="block text-gray-900 dark:text-white"> Amazing Together</span>
+                            Transform Your Business
+                            <span className="block text-gray-900 dark:text-white">With AI Agents</span>
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                            Ready to transform your business with AI? Let's discuss how we can help you achieve your goals.
+                            Ready to deploy intelligent AI automation? Contact Agent Roller today to discuss how our AI agents can revolutionize your enterprise operations.
                         </p>
                     </div>
 
@@ -56,8 +56,8 @@ ${formData.get('message')}`;
                                 </div>
                                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Email Us</h3>
                                 <p className="text-gray-600 dark:text-gray-400 mb-3">Drop us a line anytime</p>
-                                <a href="mailto:ai.agentica@gmail.com" className="text-gray-900 hover:text-black transition-colors font-medium">
-                                    ai.agentica@gmail.com
+                                <a href="mailto:contact@agentroller.com" className="text-gray-900 hover:text-black transition-colors font-medium">
+                                    contact@agentroller.com
                                 </a>
                             </div>
 

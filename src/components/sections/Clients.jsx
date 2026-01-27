@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const Clients = () => {
     const testimonials = [
         {
-            quote: "Agentica's solutions helped us automate 70% of our manual data entry work. The ROI was immediate.",
+            quote: "Agent Roller's intelligent AI agents helped us automate 70% of our manual processes. The ROI and efficiency gains were transformative.",
             name: "Sarah Chen",
             role: "CTO, FinTech Global",
             logo: "FinTech"
@@ -37,10 +37,10 @@ const Clients = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <span className="inline-block text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Testimonials</span>
-                    <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">Trusted by Innovators</h2>
+                    <span className="inline-block text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Client Success Stories</span>
+                    <h2 className="text-4xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">Trusted by Industry Leaders</h2>
                     <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-lg">
-                        Partnering with forward-thinking companies to build the future of work.
+                        Partnering with visionary enterprises to deploy intelligent AI agents and automation solutions that drive measurable results.
                     </p>
                 </motion.div>
 

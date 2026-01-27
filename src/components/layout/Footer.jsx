@@ -10,15 +10,15 @@ const Footer = () => {
                         <a href="#hero" className="flex items-center gap-3 mb-4 group">
                             <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300">
                                 <img 
-                                    src="/visuals/Logo/AI_Agentica.png" 
-                                    alt="Agentica Logo" 
+                                    src="/visuals/Logo/Agent_Roller.png" 
+                                    alt="Agent Roller - AI Agent Development & Automation Solutions" 
                                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
-                            <span className="text-2xl font-bold text-gray-900 dark:text-white">Agentica</span>
+                            <span className="text-2xl font-bold text-gray-900 dark:text-white">Agent Roller</span>
                         </a>
                         <p className="text-sm text-gray-600 max-w-xs leading-relaxed">
-                            Building the autonomous workforce of the future with cutting-edge AI solutions.
+                            Pioneering intelligent AI agents and automation solutions for the enterprise of tomorrow.
                         </p>
                     </div>
 
@@ -55,15 +55,15 @@ const Footer = () => {
                                 <Github className="w-5 h-5" />
                             </a>
                         </div>
-                        <a href="mailto:ai.agentica@gmail.com" className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium">
+                        <a href="mailto:contact@agentroller.com" className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium">
                             <Mail className="w-4 h-4" />
-                            ai.agentica@gmail.com
+                            contact@agentroller.com
                         </a>
                     </div>
                 </div>
 
                 <div className="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-sm text-gray-500 dark:text-gray-500">© {new Date().getFullYear()} Agentica AI Solutions. All rights reserved.</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-500">© {new Date().getFullYear()} Agent Roller - AI Agent Development & Automation Solutions. All rights reserved.</p>
                     <div className="flex gap-6 text-sm text-gray-500">
                         <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">Terms of Service</a>

@@ -57,11 +57,11 @@ const Navbar = ({ isDark, toggleTheme }) => {
                         <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300">
                             <img 
                                 src="/visuals/Logo/AI_Agentica.png" 
-                                alt="Agentica Logo" 
+                                alt="Agent Roller - AI Agent Development & Automation" 
                                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                         </div>
-                        <span className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Agentica</span>
+                        <span className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Agent Roller</span>
                     </a>
 
                     {/* Desktop Nav - Centered */}
