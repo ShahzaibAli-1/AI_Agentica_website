@@ -56,11 +56,11 @@ const Hero = () => {
                             </motion.div>
                             
                             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] mb-8">
-                                <span className="block text-gray-900 dark:text-white mb-2">Intelligent AI Agents</span>
+                                <span className="block text-gray-900 dark:text-white mb-2">Buidling Intelligent </span>
                                 <span className="block text-gray-900 dark:text-white">
-                                    Powering Business
+                                    AI Agents 
                                 </span>
-                                <span className="block text-gray-900 dark:text-white">Automation</span>
+                                <span className="block text-gray-900 dark:text-white">Automations </span>
                             </h1>
                             
                             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
