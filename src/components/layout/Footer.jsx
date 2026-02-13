@@ -12,7 +12,7 @@ const Footer = () => {
                                 Agent Roller
                             </h2>
                         </a>
-                        <p className="text-sm text-gray-600 max-w-xs leading-relaxed">
+                        <p className="text-sm text-gray-600 dark:text-gray-400 max-w-xs leading-relaxed">
                             Pioneering intelligent AI agents and automation solutions for the enterprise of tomorrow.
                         </p>
                     </div>
@@ -49,7 +49,7 @@ const Footer = () => {
                                 <Github className="w-5 h-5" />
                             </a>
                         </div>
-                        <a href="mailto:ai.agentica@gmail.com" className="flex items-center gap-2 text-sm text-gray-600 hover:text-gray-900 transition-colors font-medium">
+                        <a href="mailto:ai.agentica@gmail.com" className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors font-medium">
                             <Mail className="w-4 h-4" />
                             ai.agentica@gmail.com
                         </a>
@@ -57,8 +57,8 @@ const Footer = () => {
                 </div>
 
                 <div className="pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <p className="text-sm text-gray-500 dark:text-gray-500">© {new Date().getFullYear()} Agent Roller - AI Automation & Enterprise Solutions. All rights reserved.</p>
-                    <div className="flex gap-6 text-sm text-gray-500">
+                    <p className="text-sm text-gray-500 dark:text-gray-400">© {new Date().getFullYear()} Agent Roller - AI Automation & Enterprise Solutions. All rights reserved.</p>
+                    <div className="flex gap-6 text-sm text-gray-500 dark:text-gray-400">
                         <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-gray-900 dark:hover:text-white transition-colors">Terms of Service</a>
                     </div>

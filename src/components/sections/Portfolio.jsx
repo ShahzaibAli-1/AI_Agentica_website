@@ -48,7 +48,7 @@ const Portfolio = () => {
         },
         {
             title: "Multi-Lingual Chatbot",
-            desc: "Interactive multi-lingual chatbot using Python and FastAPI, supporting English, Slovenian, and Croatian. Features Google Gemini NLP with speech-to-text and text-to-speech capabilities, plus Redis session management for multi-user context retention.",
+            desc: "Interactive multi-lingual chatbot using Python and FastAPI, supporting English, Slovenian, and Croatian. Redis session management for multi-user context retention.",
             tags: ["Python", "FastAPI", "NLP", "Speech AI"],
             image: "/visuals/projects/IZI.jpeg",
             link: "https://izi-free-version.onrender.com/"
@@ -141,7 +141,7 @@ const Portfolio = () => {
                                         }
                                     }}
                                     className={`relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200 dark:border-gray-700 ${idx === 1 ? 'w-full md:w-[500px]' : 'hidden md:block w-[420px]'
-                                        } h-[550px] group cursor-pointer hover:shadow-3xl transition-all duration-300 bg-white dark:bg-gray-900`}
+                                        } h-auto md:h-[620px] group cursor-pointer hover:shadow-3xl transition-all duration-300 bg-white dark:bg-gray-900`}
                                 >
                                     {/* Image Section - Top Half */}
                                     <div className="relative h-[280px] overflow-hidden bg-gray-100 dark:bg-gray-800">
@@ -155,14 +155,14 @@ const Portfolio = () => {
                                     </div>
 
                                     {/* Content Section - Bottom Half with Solid Background */}
-                                    <div className="relative h-[270px] p-6 bg-white dark:bg-gray-900 flex flex-col">
+                                    <div className="relative h-auto p-6 bg-white dark:bg-gray-900 flex flex-col">
                                         {/* Title */}
                                         <h3 className="text-2xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors">
                                             {project.title}
                                         </h3>
 
                                         {/* Description */}
-                                        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed line-clamp-3 flex-grow">
+                                        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
                                             {project.desc}
                                         </p>
 
