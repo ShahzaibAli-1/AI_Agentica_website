@@ -21,18 +21,18 @@ const Portfolio = () => {
             link: "https://helpmelaw.us/"
         },
         {
-            title: "Medory.ai",
-            desc: "Production-grade AI medical documentation platform for automated SOAP note generation from audio and text. Features secure authentication, role-based access, patient session management, and note history with React.js frontend and FastAPI/Node.js backend.",
-            tags: ["React", "FastAPI", "Node.js", "Medical AI"],
-            image: "/visuals/projects/medori.png",
-            link: "https://medory.ai/"
-        },
-        {
             title: "ElanceBalance",
             desc: "End-to-end yoga and wellness platform with user onboarding, class listings, subscriptions, and content management. Built with React.js frontend, Node.js and FastAPI backend, featuring authentication, payments, and admin panel.",
             tags: ["React", "Node.js", "FastAPI", "Full-Stack"],
             image: "/visuals/projects/eyoga.png",
             link: "https://www.elancebalance.com/"
+        },
+        {
+            title: "Data Insight Website",
+            desc: "Official Data Insight web portal for FAST-NUCES Islamabad. Features dynamic pages, dashboards, and API-driven content updates with focus on performance, responsiveness, and maintainable architecture.",
+            tags: ["Web Development", "Dashboards", "API Integration", "Analytics"],
+            image: "/visuals/projects/data.png",
+            link: "https://isb.nu.edu.pk/datainsight/"
         },
         {
             title: "Crop Classification",
@@ -45,13 +45,6 @@ const Portfolio = () => {
             desc: "Advanced AI-driven meeting platform integrating computer vision, speech processing, and LLM.",
             tags: ["Computer Vision", "Speech AI", "Diarization", "LLM"],
             image: "/visuals/projects/AI_Meeting.webp",
-        },
-        {
-            title: "Data Insight Website",
-            desc: "Official Data Insight web portal for FAST-NUCES Islamabad. Features dynamic pages, dashboards, and API-driven content updates with focus on performance, responsiveness, and maintainable architecture.",
-            tags: ["Web Development", "Dashboards", "API Integration", "Analytics"],
-            image: "/visuals/projects/data.png",
-            link: "https://isb.nu.edu.pk/datainsight/"
         },
         {
             title: "Multi-Lingual Chatbot",
@@ -155,7 +148,7 @@ const Portfolio = () => {
                                         <img
                                             src={project.image}
                                             alt={project.title}
-                                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                            className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700"
                                         />
                                         {/* Subtle overlay on image */}
                                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
