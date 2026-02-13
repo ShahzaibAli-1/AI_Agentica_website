@@ -28,10 +28,10 @@ const Contact = () => {
                 setIsSubmitted(true);
                 e.target.reset();
 
-                // Hide success message after 5 seconds
+                // Hide success message after 3 seconds
                 setTimeout(() => {
                     setIsSubmitted(false);
-                }, 5000);
+                }, 3000);
             } else {
                 setError('Failed to send message. Please try again.');
             }
@@ -51,14 +51,14 @@ const Contact = () => {
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -50 }}
-                        className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4"
+                        className="fixed top-4 md:top-8 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-md px-2 md:px-4"
                     >
-                        <div className="bg-green-600 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center justify-between">
-                            <div className="flex items-center gap-3">
-                                <CheckCircle className="w-6 h-6 flex-shrink-0" />
+                        <div className="bg-green-600 text-white px-4 md:px-6 py-3 md:py-4 rounded-xl shadow-2xl flex items-center justify-between">
+                            <div className="flex items-center gap-2 md:gap-3">
+                                <CheckCircle className="w-5 h-5 md:w-6 md:h-6 flex-shrink-0" />
                                 <div>
-                                    <p className="font-semibold">Message Sent Successfully!</p>
-                                    <p className="text-sm text-green-100">We'll get back to you soon.</p>
+                                    <p className="font-semibold text-sm md:text-base">Message Sent Successfully!</p>
+                                    <p className="text-xs md:text-sm text-green-100">We'll get back to you soon.</p>
                                 </div>
                             </div>
                             <button
