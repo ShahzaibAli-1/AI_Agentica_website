@@ -1,29 +1,108 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { motion } from 'framer-motion';
-import { Mail, MessageCircle, Clock } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { Mail, MessageCircle, Clock, CheckCircle, X, Loader2, AlertCircle } from 'lucide-react';
 
 const Contact = () => {
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-        const subject = `Project Inquiry from ${formData.get('firstName')} ${formData.get('lastName')}`;
-        const body = `Name: ${formData.get('firstName')} ${formData.get('lastName')}
-Email: ${formData.get('email')}
-Message:
-${formData.get('message')}`;
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [error, setError] = useState(null);
 
-        window.location.href = `mailto:contact@agentroller.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setError(null);
+
+        const formData = new FormData(e.target);
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setIsSubmitted(true);
+                e.target.reset();
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    setIsSubmitted(false);
+                }, 5000);
+            } else {
+                setError('Failed to send message. Please try again.');
+            }
+        } catch (err) {
+            setError('An error occurred. Please try again later.');
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
         <section id="contact" className="min-h-screen flex flex-col justify-center py-24 bg-gray-50 dark:bg-gray-800 relative snap-start">
+            {/* Success Notification */}
+            <AnimatePresence>
+                {isSubmitted && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -50 }}
+                        className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4"
+                    >
+                        <div className="bg-green-600 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <CheckCircle className="w-6 h-6 flex-shrink-0" />
+                                <div>
+                                    <p className="font-semibold">Message Sent Successfully!</p>
+                                    <p className="text-sm text-green-100">We'll get back to you soon.</p>
+                                </div>
+                            </div>
+                            <button
+                                onClick={() => setIsSubmitted(false)}
+                                className="ml-4 hover:bg-green-700 rounded-lg p-1 transition-colors"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+                        </div>
+                    </motion.div>
+                )}
+
+                {/* Error Notification */}
+                {error && (
+                    <motion.div
+                        initial={{ opacity: 0, y: -50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -50 }}
+                        className="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-md px-4"
+                    >
+                        <div className="bg-red-600 text-white px-6 py-4 rounded-xl shadow-2xl flex items-center justify-between">
+                            <div className="flex items-center gap-3">
+                                <AlertCircle className="w-6 h-6 flex-shrink-0" />
+                                <div>
+                                    <p className="font-semibold">Error!</p>
+                                    <p className="text-sm text-red-100">{error}</p>
+                                </div>
+                            </div>
+                            <button
+                                onClick={() => setError(null)}
+                                className="ml-4 hover:bg-red-700 rounded-lg p-1 transition-colors"
+                            >
+                                <X className="w-5 h-5" />
+                            </button>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white opacity-50" />
-            
+            <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 opacity-50" />
+
             <div className="container mx-auto px-4 md:px-6 relative z-10">
-                <motion.div 
+                <motion.div
                     className="max-w-5xl mx-auto"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -33,17 +112,14 @@ ${formData.get('message')}`;
                     <div className="text-center mb-16">
                         <span className="inline-block text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">Get In Touch</span>
                         <h2 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-                            Transform Your Business
-                            <span className="block text-gray-900 dark:text-white">With AI Agents</span>
+                            Scale Your Vision
+                            <span className="block text-gray-900 dark:text-white">With Expert Engineering</span>
                         </h2>
-                        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                            Ready to deploy intelligent AI automation? Contact Agent Roller today to discuss how our AI agents can revolutionize your enterprise operations.
-                        </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         {/* Contact Info */}
-                        <motion.div 
+                        <motion.div
                             className="space-y-6"
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -56,8 +132,8 @@ ${formData.get('message')}`;
                                 </div>
                                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Email Us</h3>
                                 <p className="text-gray-600 dark:text-gray-400 mb-3">Drop us a line anytime</p>
-                                <a href="mailto:contact@agentroller.com" className="text-gray-900 hover:text-black transition-colors font-medium">
-                                    contact@agentroller.com
+                                <a href="mailto:ai.agentica@gmail.com" className="text-gray-900 hover:text-black transition-colors font-medium">
+                                    ai.agentica@gmail.com
                                 </a>
                             </div>
 
@@ -68,14 +144,13 @@ ${formData.get('message')}`;
                                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Quick Response</h3>
                                 <p className="text-gray-600 dark:text-gray-400 mb-3">We typically respond within 24 hours</p>
                                 <div className="flex items-center gap-2 text-gray-700">
-                                    <Clock className="w-4 h-4" />
-                                    <span className="text-sm">Mon - Fri: 9AM - 6PM</span>
+
                                 </div>
                             </div>
                         </motion.div>
 
                         {/* Contact Form */}
-                        <motion.div 
+                        <motion.div
                             className="p-8 rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow"
                             initial={{ opacity: 0, x: 20 }}
                             whileInView={{ opacity: 1, x: 0 }}
@@ -83,22 +158,25 @@ ${formData.get('message')}`;
                             transition={{ duration: 0.6, delay: 0.3 }}
                         >
                             <form className="space-y-6" onSubmit={handleSubmit}>
+                                {/* Web3Forms Access Key */}
+                                <input type="hidden" name="access_key" value="53429f7c-2a17-4e7b-ad51-e674da8308b1" />
+
                                 <div className="grid grid-cols-2 gap-4">
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-gray-700 dark:text-gray-300">First Name</label>
-                                        <Input 
-                                            name="firstName" 
-                                            placeholder="Jane" 
-                                            required 
+                                        <Input
+                                            name="firstName"
+                                            placeholder="Jane"
+                                            required
                                             className="bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-gray-900"
                                         />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Last Name</label>
-                                        <Input 
-                                            name="lastName" 
-                                            placeholder="Doe" 
-                                            required 
+                                        <Input
+                                            name="lastName"
+                                            placeholder="Doe"
+                                            required
                                             className="bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-gray-900"
                                         />
                                     </div>
@@ -106,11 +184,11 @@ ${formData.get('message')}`;
 
                                 <div className="space-y-2">
                                     <label className="text-sm font-medium text-gray-700 dark:text-gray-300">Work Email</label>
-                                    <Input 
-                                        name="email" 
-                                        type="email" 
-                                        placeholder="jane@company.com" 
-                                        required 
+                                    <Input
+                                        name="email"
+                                        type="email"
+                                        placeholder="jane@company.com"
+                                        required
                                         className="bg-white dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-500 focus:border-gray-900"
                                     />
                                 </div>
@@ -125,11 +203,19 @@ ${formData.get('message')}`;
                                     />
                                 </div>
 
-                                <Button 
-                                    type="submit" 
-                                    className="w-full text-base py-6 bg-black dark:bg-white hover:bg-gray-900 dark:hover:bg-gray-100 text-white dark:text-black rounded-full"
+                                <Button
+                                    type="submit"
+                                    disabled={isSubmitting}
+                                    className="w-full text-base py-6 bg-black dark:bg-white hover:bg-gray-900 dark:hover:bg-gray-100 text-white dark:text-black rounded-full disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                                 >
-                                    Send Message
+                                    {isSubmitting ? (
+                                        <>
+                                            <Loader2 className="w-5 h-5 animate-spin" />
+                                            Sending...
+                                        </>
+                                    ) : (
+                                        'Send Message'
+                                    )}
                                 </Button>
                             </form>
                         </motion.div>

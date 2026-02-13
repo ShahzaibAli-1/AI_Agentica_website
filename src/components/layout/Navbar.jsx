@@ -39,29 +39,26 @@ const Navbar = ({ isDark, toggleTheme }) => {
         { name: 'Services', href: '#services', id: 'services' },
         { name: 'Work', href: '#work', id: 'work' },
         { name: 'Team', href: '#team', id: 'team' },
-        { name: 'Clients', href: '#clients', id: 'clients' },
     ];
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-                isScrolled 
-                    ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-gray-700' 
-                    : 'bg-transparent'
-            }`}
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+                ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-xl border-b border-gray-200 dark:border-gray-700'
+                : 'bg-transparent'
+                }`}
         >
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex items-center justify-center h-20 relative">
                     {/* Logo */}
-                    <a href="#hero" className="absolute left-0 flex items-center gap-3 group">
-                        <div className="relative w-12 h-12 rounded-xl overflow-hidden shadow-md group-hover:shadow-lg transition-all duration-300">
-                            <img 
-                                src="/visuals/Logo/AI_Agentica.png" 
-                                alt="Agent Roller - AI Agent Development & Automation" 
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    <a href="#hero" className="absolute left-0 group">
+                        <div className="relative w-48 h-48">
+                            <img
+                                src="/visuals/Logo/new-logo-r.png"
+                                alt="Agent Roller - Enterprise AI Automation & Custom Software Solutions"
+                                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                             />
                         </div>
-                        <span className="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Agent Roller</span>
                     </a>
 
                     {/* Desktop Nav - Centered */}
@@ -70,11 +67,10 @@ const Navbar = ({ isDark, toggleTheme }) => {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className={`relative text-sm font-medium transition-colors ${
-                                    activeSection === link.id
-                                        ? 'text-gray-900 dark:text-white'
-                                        : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
-                                }`}
+                                className={`relative text-sm font-medium transition-colors ${activeSection === link.id
+                                    ? 'text-gray-900 dark:text-white'
+                                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                                    }`}
                             >
                                 {link.name}
                                 {activeSection === link.id && (
@@ -101,16 +97,16 @@ const Navbar = ({ isDark, toggleTheme }) => {
                                 <Moon className="w-5 h-5 text-gray-600" />
                             )}
                         </button>
-                        
+
                         <div className="hidden md:block">
-                            <Button 
+                            <Button
                                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                                 className="bg-black dark:bg-white hover:bg-gray-900 dark:hover:bg-gray-100 text-white dark:text-black rounded-full px-6"
                             >
                                 Get Started
                             </Button>
                         </div>
-                        
+
                         {/* Mobile Menu Button */}
                         <button
                             className="md:hidden p-2 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -141,7 +137,7 @@ const Navbar = ({ isDark, toggleTheme }) => {
                                 {link.name}
                             </a>
                         ))}
-                        <Button 
+                        <Button
                             className="w-full bg-black dark:bg-white hover:bg-gray-900 dark:hover:bg-gray-100 text-white dark:text-black rounded-full"
                             onClick={() => {
                                 setIsMobileMenuOpen(false);

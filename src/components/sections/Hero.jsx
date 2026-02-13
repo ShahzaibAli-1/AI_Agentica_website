@@ -8,28 +8,28 @@ const Hero = () => {
         <section id="hero" className="min-h-screen flex flex-col justify-center py-24 bg-white dark:bg-gray-900 relative snap-start overflow-hidden transition-colors duration-300">
             {/* Animated Background Gradient */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <motion.div 
+                <motion.div
                     className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-gradient-to-br from-gray-100 dark:from-gray-800 via-gray-50 dark:via-gray-900 to-transparent rounded-full blur-3xl"
-                    animate={{ 
+                    animate={{
                         scale: [1, 1.2, 1],
                         rotate: [0, 90, 0],
                     }}
-                    transition={{ 
+                    transition={{
                         duration: 20,
                         repeat: Infinity,
-                        ease: "linear" 
+                        ease: "linear"
                     }}
                 />
-                <motion.div 
+                <motion.div
                     className="absolute bottom-1/4 -left-1/4 w-[500px] h-[500px] bg-gradient-to-tr from-gray-50 dark:from-gray-900 via-gray-100 dark:via-gray-800 to-transparent rounded-full blur-3xl"
-                    animate={{ 
+                    animate={{
                         scale: [1, 1.3, 1],
                         rotate: [0, -90, 0],
                     }}
-                    transition={{ 
+                    transition={{
                         duration: 25,
                         repeat: Infinity,
-                        ease: "linear" 
+                        ease: "linear"
                     }}
                 />
                 {/* Grid Pattern */}
@@ -45,29 +45,15 @@ const Hero = () => {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, ease: "easeOut" }}
                         >
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.8 }}
-                                animate={{ opacity: 1, scale: 1 }}
-                                transition={{ duration: 0.5, delay: 0.2 }}
-                                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 mb-8"
-                            >
-                                {/* <Sparkles className="w-4 h-4 text-gray-900 dark:text-white" /> */}
-                                <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Enterprise AI Agent Development & Intelligent Automation</span>
-                            </motion.div>
-                            
                             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.1] mb-8">
-                                <span className="block text-gray-900 dark:text-white mb-2">Buidling Intelligent </span>
-                                <span className="block text-gray-900 dark:text-white">
-                                    AI Agents 
-                                </span>
-                                <span className="block text-gray-900 dark:text-white">Automations </span>
+                                <span className="block text-gray-900 dark:text-white">Engineering the Future of Enterprise Intelligence</span>
                             </h1>
-                            
+
                             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-                                Transform your enterprise with cutting-edge AI agents and intelligent automation. From autonomous workflows to custom AI solutions—Agent Roller delivers scalable, enterprise-grade AI technology.
+                                From custom Full Stack ecosystems to advanced AI automations, Agent Roller delivers end-to-end technical solutions. We don't just build tools; we build the infrastructure that scales your vision.
                             </p>
-                            
-                            <motion.div 
+
+                            <motion.div
                                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}

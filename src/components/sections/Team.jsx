@@ -1,5 +1,5 @@
 import React from 'react';
-import { Twitter, Instagram, Facebook } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Team = () => {
@@ -8,68 +8,38 @@ const Team = () => {
             name: "Shahzaib Ali",
             role: "AI Engineer",
             image: "/visuals/team/Shahzaib_Ali.jpg",
-            social: {
-                twitter: "#",
-                instagram: "#",
-                facebook: "#"
-            }
+            linkedin: "https://www.linkedin.com/in/shahzaib-ali-khan-64511224b/"
         },
         {
             name: "Shaiman Qadir",
-            role: "Computer Vision Specialist",
+            role: "Web Developer",
             image: "/visuals/team/Shaiman.jpeg",
-            social: {
-                twitter: "#",
-                instagram: "#",
-                facebook: "#"
-            }
+            linkedin: "https://www.linkedin.com/in/shaimaan-qadir-17a2a5268/"
         },
         {
             name: "Amr Rameez",
             role: "MLOps Engineer",
             image: "/visuals/team/Amar.jpeg",
-            social: {
-                twitter: "#",
-                instagram: "#",
-                facebook: "#"
-            }
+            linkedin: "https://www.linkedin.com/in/amar-rameez-a5337022a/"
         },
         {
             name: "Abdul Moiz Rana",
             role: "Full-Stack Developer",
             image: "/visuals/team/Rana.jpeg",
-            social: {
-                twitter: "#",
-                instagram: "#",
-                facebook: "#"
-            }
+            linkedin: "https://www.linkedin.com/in/abdul-moiz-rana-590289259/"
         },
         {
             name: "Abdulahad Iltaf",
             role: "Automation Engineer",
             image: "/visuals/team/Ahad.jpg",
-            social: {
-                twitter: "#",
-                instagram: "#",
-                facebook: "#"
-            }
-        },
-        {
-            name: "Haji Dilbar",
-            role: "Web Developer",
-            image: "/visuals/team/Haji_Dilbar.jpg",
-            social: {
-                twitter: "#",
-                instagram: "#",
-                facebook: "#"
-            }
+            linkedin: "https://www.linkedin.com/in/ACoAAEZ_i1oB0rYJiFbQEeklE55RxGEUzU8-a0M"
         }
     ];
 
     return (
         <section id="team" className="min-h-screen flex flex-col justify-center py-24 bg-white dark:bg-gray-900 relative transition-colors duration-300">
             <div className="container mx-auto px-4 md:px-6 relative z-10">
-                <motion.div 
+                <motion.div
                     className="text-center mb-16"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -82,9 +52,9 @@ const Team = () => {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-12 max-w-7xl mx-auto">
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-12 max-w-7xl mx-auto justify-items-center">
                     {team.map((member, index) => (
-                        <motion.div 
+                        <motion.div
                             key={index}
                             initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -94,36 +64,24 @@ const Team = () => {
                         >
                             <div className="relative w-40 h-40 mb-4">
                                 <div className="w-full h-full rounded-full overflow-hidden bg-gray-200 dark:bg-gray-800">
-                                    <img 
-                                        src={member.image} 
-                                        alt={member.name} 
+                                    <img
+                                        src={member.image}
+                                        alt={member.name}
                                         className="w-full h-full object-cover transition-all duration-300"
                                     />
                                 </div>
                             </div>
                             <h3 className="text-base font-bold text-gray-900 dark:text-white mb-1">{member.name}</h3>
                             <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{member.role}</p>
-                            <div className="flex gap-3">
-                                <a 
-                                    href={member.social.twitter}
-                                    className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                                    aria-label="Twitter"
+                            <div className="flex justify-center">
+                                <a
+                                    href={member.linkedin}
+                                    className="text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                                    aria-label="LinkedIn"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                 >
-                                    <Twitter className="w-4 h-4" />
-                                </a>
-                                <a 
-                                    href={member.social.instagram}
-                                    className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                                    aria-label="Instagram"
-                                >
-                                    <Instagram className="w-4 h-4" />
-                                </a>
-                                <a 
-                                    href={member.social.facebook}
-                                    className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
-                                    aria-label="Facebook"
-                                >
-                                    <Facebook className="w-4 h-4" />
+                                    <Linkedin className="w-5 h-5" />
                                 </a>
                             </div>
                         </motion.div>

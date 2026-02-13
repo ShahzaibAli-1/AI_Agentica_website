@@ -15,9 +15,9 @@ function App() {
         // Check for saved theme preference or default to light
         const savedTheme = localStorage.getItem('theme');
         const isDarkMode = savedTheme === 'dark';
-        
+
         setIsDark(isDarkMode);
-        
+
         if (isDarkMode) {
             document.documentElement.classList.add('dark');
         } else {
@@ -28,7 +28,7 @@ function App() {
     const toggleTheme = () => {
         const newIsDark = !isDark;
         setIsDark(newIsDark);
-        
+
         if (newIsDark) {
             document.documentElement.classList.add('dark');
             localStorage.setItem('theme', 'dark');
@@ -45,7 +45,9 @@ function App() {
                 <Hero />
                 <Services />
                 <Portfolio />
-                <Clients />
+                <div className="hidden">
+                    <Clients />
+                </div>
                 <Team />
                 <Contact />
             </main>
